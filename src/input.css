@@ -26,6 +26,9 @@
   --color-cyan-dark: #0b76b7;
   --color-teal: #02aaa4;
   --color-teal-dark: #06a09b;
+  --color-orange: #ff822e;
+  --color-red: #b02c13;
+  --color-red-2: #d32e2b;
 }
 
 body {
