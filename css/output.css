@@ -588,6 +588,24 @@
   .bg-orange {
     background-color: var(--color-orange);
   }
+  .bg-orange\/30 {
+    background-color: color-mix(in srgb, #ff822e 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-orange) 30%, transparent);
+    }
+  }
+  .bg-orange\/50 {
+    background-color: color-mix(in srgb, #ff822e 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-orange) 50%, transparent);
+    }
+  }
+  .bg-orange\/70 {
+    background-color: color-mix(in srgb, #ff822e 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-orange) 70%, transparent);
+    }
+  }
   .bg-purple\/\[0\.08\] {
     background-color: color-mix(in srgb, #8646f4 8%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -599,6 +617,12 @@
   }
   .bg-red-2 {
     background-color: var(--color-red-2);
+  }
+  .bg-red\/50 {
+    background-color: color-mix(in srgb, #b02c13 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-red) 50%, transparent);
+    }
   }
   .bg-white {
     background-color: var(--color-white);
@@ -765,11 +789,17 @@
   .text-green-dark {
     color: var(--color-green-dark);
   }
+  .text-orange {
+    color: var(--color-orange);
+  }
   .text-primary {
     color: var(--color-primary);
   }
   .text-purple-dark {
     color: var(--color-purple-dark);
+  }
+  .text-red {
+    color: var(--color-red);
   }
   .text-white {
     color: var(--color-white);
@@ -949,6 +979,13 @@
       }
     }
   }
+  .hover\:bg-red-2 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-2);
+      }
+    }
+  }
   .hover\:bg-\[length\:100\%_3px\] {
     &:hover {
       @media (hover: hover) {
@@ -970,6 +1007,20 @@
       }
     }
   }
+  .hover\:text-red {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red);
+      }
+    }
+  }
+  .hover\:text-red-2 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-2);
+      }
+    }
+  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
@@ -988,6 +1039,16 @@
     &:hover {
       @media (hover: hover) {
         opacity: 95%;
+      }
+    }
+  }
+  .hover\:text-shadow-dark {
+    &:hover {
+      @media (hover: hover) {
+        --tw-text-shadow-color: #15171a;
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-text-shadow-color: color-mix(in oklab, var(--color-dark) var(--tw-text-shadow-alpha), transparent);
+        }
       }
     }
   }
@@ -1478,6 +1539,15 @@ body {
   inherits: false;
   initial-value: 1;
 }
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -1525,6 +1595,8 @@ body {
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
     }
   }
 }
