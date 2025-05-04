@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-primary: #625df5;
+  --color-body: #374151;
+  --color-dark-2: #979797;
+  --color-dark-3: #b4b4bb;
+  --color-dark-4: #5c6a78;
+  --color-dark-5: #bbbec9;
+  --color-dark: #15171a;
+  --color-gray-2: #f3f4f6;
+  --color-gray-3: #e5e7eb;
+  --color-gray-4: #d1d5db;
+  --color-gray-5: #9ca3af;
+  --color-gray-7: #374151;
+  --color-gray: #f9fafb;
+  --color-blue: #2d68f8;
+  --color-green: #22ad5c;
+  --color-green-dark: #1a8245;
+  --color-purple: #8646f4;
+  --color-purple-dark: #6d28d9;
+  --color-cyan: #01a9db;
+  --color-cyan-dark: #0b76b7;
+  --color-teal: #02aaa4;
+  --color-teal-dark: #06a09b;
+}
+
+body {
+  @apply font-inter text-base leading-6 font-normal text-dark-4;
+}
+
+.text-heading-1 {
+  @apply xl:text-3xl/[38px]  text-[22px]/[30px];
+}
+
+.text-heading-3 {
+  @apply text-[40px]/[48px];
+}
+
+.text-heading-4 {
+  @apply text-3xl/[38px];
+}
+.text-heading-5 {
+  @apply text-[28px]/[32px];
+}
+.text-custom-4 {
+  @apply text-[22px]/[30px];
+}
+
+.text-heading-6 {
+  @apply text-2xl leading-[30px];
+}
+
+.text-custom-lg {
+  @apply text-lg/[24px];
+}
+.text-custom-sm {
+  @apply text-sm/[22px];
+}
+.text-custom-xl {
+  @apply text-xl/[24px];
+}
+
+.shadow-1 {
+  --tw-shadow: 0px 1px 2px 0px var(--tw-shadow-color, rgba(166, 175, 195, 0.25));
+  -webkit-box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+
+.shadow-input:focus {
+  --tw-shadow: inset 0 0 0 2px var(--tw-shadow-color, #15171a);
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@layer components {
+  .dropdown {
+    @apply absolute left-0 z-10 mt-2 hidden w-full md:w-[230px]  flex-col gap-2 rounded-lg bg-white p-3 shadow-lg transition duration-200 ease-in;
+  }
+
+  @media (min-width: 1024px) {
+    .group:hover .dropdown {
+      @apply flex visible opacity-100 translate-y-3;
+    }
+  }
+}
