@@ -758,6 +758,9 @@
   .bg-\[length\:0px_1px\] {
     background-size: 0px 1px;
   }
+  .bg-\[length\:0px_5px\] {
+    background-size: 0px 5px;
+  }
   .bg-\[length\:0px_10px\] {
     background-size: 0px 10px;
   }
@@ -1056,6 +1059,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         background-size: 100% 1px;
+      }
+    }
+  }
+  .group-hover\:bg-\[length\:100\%_3px\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-size: 100% 3px;
       }
     }
   }
