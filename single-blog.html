@@ -29,9 +29,9 @@
 
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
 
-            <div class="w-full lg:w-3/12 flex items-center justify-between">
-                <a href="./index.html" class="flex items-center gap-2.5 lg:gap-3.5">
-                    <img src="./assets/svg/logo-lite.svg" alt="Logo" />
+            <div class="w-full lg:w-1/6 flex items-center justify-between">
+                <a href="./index.html" class="flex items-center gap-2.5 lg:gap-3.5 w-28 py-5">
+                    <img src="./assets/images/1.jfif" alt="Logo" />
                 </a>
 
                 <!-- Hamburger Toggle BTN -->
@@ -71,7 +71,7 @@
                             x-data="{ dropdown: false }">
                             <a href="./index.html" class="hover:text-dark flex items-center justify-between gap-3"
                                 @click.prevent="dropdown = !dropdown"
-                                :class="{ 'text-dark!': page === 'personal-blog' || page === 'home' }">
+                                :class="{ 'text-dark!': page === 'home' || page === 'home' }">
                                 Home
 
                                 <svg class="fill-current w-3 h-3 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
