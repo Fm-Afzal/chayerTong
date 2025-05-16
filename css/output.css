@@ -1307,6 +1307,11 @@
       padding-top: calc(var(--spacing) * 40);
     }
   }
+  .lg\:pt-42 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 42);
+    }
+  }
   .lg\:transition-all {
     @media (width >= 64rem) {
       transition-property: all;
