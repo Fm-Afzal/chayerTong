@@ -23,8 +23,8 @@
     <!-- ===== Preloader End ===== -->
 
     <!-- ===== Header Start ===== -->
-    <header class="fixed left-0 top-0 w-full z-9999 bg-white py-7 lg:py-0 transition-all ease-in-out duration-300"
-        :class="{ 'shadow-sm py-4! lg:py-0!' : stickyMenu }"
+    <header class="fixed left-0 top-0 w-full z-9999 bg-white  lg:py-0 transition-all ease-in-out duration-300"
+        :class="{ 'shadow-sm lg:py-0!' : stickyMenu }"
         @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false">
 
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
@@ -157,7 +157,7 @@
     <main>
 
           <!-- ===== Blog Single Start ===== -->
-      <section class="pt-31.5 pb-17.5">
+      <section class=" pt-60 lg:pt-40 pb-17.5">
         <div class="max-w-[1030px] mx-auto px-4 sm:px-8 xl:px-0">
           <div class="max-w-[770px] mx-auto text-center">
             <a

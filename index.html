@@ -23,8 +23,8 @@
     <!-- ===== Preloader End ===== -->
 
     <!-- ===== Header Start ===== -->
-    <header class="fixed left-0 top-0 w-full z-9999 bg-white py-7 lg:py-0 transition-all ease-in-out duration-300"
-        :class="{ 'shadow-sm py-4! lg:py-0!' : stickyMenu }"
+    <header class="fixed left-0 top-0 w-full z-9999 bg-white  lg:py-0 transition-all ease-in-out duration-300"
+        :class="{ 'shadow-sm lg:py-0!' : stickyMenu }"
         @scroll.window="stickyMenu = (window.scrollY > 0) ? true : false">
 
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0 lg:flex items-center justify-between relative">
@@ -157,7 +157,7 @@
     <main>
 
         <!-- ===== Hero Section Start ===== -->
-        <section id=" home" class="rounded-b-[50px] relative overflow-hidden z-10 pb-15 pt-34">
+        <section id=" home" class="rounded-b-[50px] relative overflow-hidden z-10 pb-15 pt-42">
             <!-- Hero BG Shapes Start -->
             <div>
                 <div class="absolute bottom-0 left-0 rounded-b-[50px] w-full h-full bg-gray">
